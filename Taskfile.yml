@@ -8,4 +8,4 @@ vars:
 
 tasks:
   build: docker build -t {{.image}} .
-  run: docker run --rm -it -e -e WS_CONNECT_URL={{.csms}} {{.image}}
+  run: docker run --rm -it -e WS_CONNECT_URL={{.csms}} {{.image}}
