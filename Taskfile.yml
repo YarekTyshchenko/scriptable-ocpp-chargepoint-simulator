@@ -1,0 +1,11 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  image: charge-station-emulator
+  csms: wss://localhost:3000/ocpp/foo
+
+tasks:
+  build: docker build -t {{.image}} .
+  run: docker run --rm -it -e -e WS_CONNECT_URL={{.csms}} {{.image}}
